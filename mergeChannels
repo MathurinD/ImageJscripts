@@ -1,0 +1,6 @@
+#! /bin/bash
+
+echo "Merging $1"
+output=$(ImageJ -batch ~/bin/mergeChannels.ijm $1 2> /dev/null)
+eog $output &
+echo "Merged file $output"
